@@ -1,12 +1,10 @@
 import React from 'react'
 import { StackNavigator } from 'react-navigation'
-
-// import EmployeeScreen from '~/navigation/drawer/screens/employee'
-// import LoginScreen from '~/navigation/root/screens/login'
+import LoginContainer from '~/containers/login'
 import Drawer from '~/navigation/drawer'
 
 const RootStackNavigator = StackNavigator({
-  // Login: { screen: LoginScreen,
+  // Login: { screen: LoginContainer,
   //   navigationOptions: ({ navigation }) => {
   //     return ({
   //     // header: null,

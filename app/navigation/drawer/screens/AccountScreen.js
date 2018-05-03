@@ -1,19 +1,17 @@
 import React, { Component } from 'react'
 import { View, Text } from 'react-native'
 
-// import ActivitiesContainer from '~/containers/activities'
-// import PollsContainer from '~/containers/polls'
-
-export default class HomeScreen extends Component {
+export default class AccountScreen extends Component {
   static navigationOptions = {
-    title: 'Testicles. Woops I mean Testies.',
+    title: 'Account',
   };
+
   render () {
     const { navigate } = this.props.navigation
     return (
       <View>
         <Text>
-          Say Whaaaaaaaaaaaaaaa!
+          Account
         </Text>
       </View>
     )

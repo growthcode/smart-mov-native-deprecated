@@ -1,7 +1,11 @@
 import React from 'react'
 import { DrawerNavigator } from 'react-navigation'
+import NavBarItem from '~/components/navBarItem'
 
-import asdf from '~/navigation/drawer/screens/asdf'
+import RecordMovScreen from '~/navigation/drawer/screens/RecordMovScreen'
+import HistoryScreen from '~/navigation/drawer/screens/HistoryScreen'
+import SummaryScreen from '~/navigation/drawer/screens/SummaryScreen'
+import AccountScreen from '~/navigation/drawer/screens/AccountScreen'
 // import DirectoryScreen from '~/navigation/drawer/screens/directory'
 // import EmployeeScreen from '~/navigation/drawer/screens/employee'
 // import NavBarItem from '~/components/navBarItem'
@@ -9,8 +13,10 @@ import asdf from '~/navigation/drawer/screens/asdf'
 
 const Drawer = DrawerNavigator({
   // Home: { screen: HomeScreen },
-  asdf: { screen: asdf },
-  // Directory: { screen: DirectoryScreen },
+  RecordMovScreen: { screen: RecordMovScreen },
+  HistoryScreen: { screen: HistoryScreen },
+  SummaryScreen: { screen: SummaryScreen },
+  AccountScreen: { screen: AccountScreen },
 },
 {
   navigationOptions: ({ navigation }) => {
@@ -18,21 +24,21 @@ const Drawer = DrawerNavigator({
     const primaryColor = '#3498db'
     const secondaryColor = 'white'
     return ({
-      // title: state.routeName,
-      // headerStyle: {
-      //   backgroundColor: primaryColor,
-      // },
-      // headerTitleStyle: {
-      //   color: secondaryColor,
-      // },
-      // headerTintColor: {
-      //   tintColor: secondaryColor,
-      // },
-      // headerLeft: (
-      //   <NavBarItem
-      //     iconName='bars'
-      //     onPress={ () => { navigate('DrawerToggle') } }/>
-      // ),
+      title: state.routeName,
+      headerStyle: {
+        backgroundColor: primaryColor,
+      },
+      headerTitleStyle: {
+        color: secondaryColor,
+      },
+      headerTintColor: {
+        tintColor: secondaryColor,
+      },
+      headerLeft: (
+        <NavBarItem
+          iconName='bars'
+          onPress={ () => { navigate('DrawerToggle') } }/>
+      ),
     })
   },
 })
