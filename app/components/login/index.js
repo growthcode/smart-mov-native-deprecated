@@ -12,7 +12,7 @@ export default function Login (props) {
         { 'Login' }
       </Text>
       <Button
-        onPress={ () => props.navigate('asdf') }
+        onPress={ () => props.navigate('Drawer') }
         title='Login' />
     </View>
   )
