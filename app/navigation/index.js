@@ -1,6 +1,6 @@
 import React from 'react'
 import { StackNavigator } from 'react-navigation'
-import LoginContainer from '~/containers/login'
+import LoginContainer from '~/containers/login/LoginContainer'
 import Drawer from '~/navigation/drawer'
 
 const RootStackNavigator = StackNavigator({
