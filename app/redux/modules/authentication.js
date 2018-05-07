@@ -86,17 +86,6 @@ const initialState = {
   isAuthenticating: true,
   authedId: '',
   displayName: '',
-  reduxTokenAuth: {
-    currentUser: {
-      isLoading: false,
-      isSignedIn: false,
-      attributes: {
-        first: null, // <-- Just an example. Attributes are whatever you specify in your cofig (below).
-        last: null, // <-- Just an example. Attributes are whatever you specify in your cofig (below).
-        updatedAt: null, // <-- Just an example. Attributes are whatever you specify in your cofig (below).
-      },
-    },
-  },
 }
 
 export default function authentication (state = initialState, action) {

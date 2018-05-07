@@ -1,6 +1,6 @@
 import React, { PropTypes, Component } from 'react'
 import { View, Button, StyleSheet, Text } from 'react-native'
-import { signInUser } from '~/config/redux-token-auth-config'
+// import { signInUser } from '~/config/redux-token-auth-config'
 
 Login.propTypes = {
 

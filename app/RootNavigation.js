@@ -1,7 +1,8 @@
 import { Notifications } from 'expo'
 import React from 'react'
 import registerForPushNotificationsAsync from '~/helpers/expo/registerForPushNotificationsAsync'
-import Navigation from '~/navigation'
+import Navigation from '~/navigation/Navigation'
+import { addNavigationHelpers } from 'react-navigation'
 
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
 import * as reducers from '~/redux'
@@ -64,8 +65,11 @@ export default class RootNavigator extends React.Component {
   render () {
     return (
       <Provider store={store}>
-        <Navigation />
+        <Navigation
+          store={store}
+        />
       </Provider>
     )
   }
 }
+
