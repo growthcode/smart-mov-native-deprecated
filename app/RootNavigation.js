@@ -10,8 +10,9 @@ import { Provider } from 'react-redux'
 import { reduxTokenAuthReducer } from 'redux-token-auth'
 import devTools from 'remote-redux-devtools'
 import { LOGGING_OUT } from '~/redux/modules/authentication'
+import { verifyCredentials } from '~/config/redux-token-auth-config'
 
-const appReducer = combineReducers(reducers);
+const appReducer = combineReducers({...reducers, reduxTokenAuth: reduxTokenAuthReducer});
 function rootReducer (state, action) {
   if (action.type === LOGGING_OUT) {
     state = undefined
@@ -24,10 +25,10 @@ const store = createStore(
   rootReducer,
   compose(
     applyMiddleware(ReduxThunk),
-    // reduxTokenAuth: reduxTokenAuthReducer,
     devTools()
   )
 );
+verifyCredentials(store)
 
 export default class RootNavigator extends React.Component {
   componentDidMount () {

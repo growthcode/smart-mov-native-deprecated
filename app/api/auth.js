@@ -1,4 +1,11 @@
+import { generateAuthActions } from 'redux-token-auth'
+import { authUrl } from '~/config/constants'
+
 export function getAccessToken () {
+  const email = 'admin@gmail.com'
+  const password = 'password'
+  debugger
+  return signInUser({email, password})
   // return AccessToken.getCurrentAccessToken()
 }
 
