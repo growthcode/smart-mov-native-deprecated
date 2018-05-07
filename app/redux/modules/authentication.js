@@ -91,7 +91,9 @@ const initialState = {
       isLoading: false,
       isSignedIn: false,
       attributes: {
-        firstName: null, // <-- Just an example. Attributes are whatever you specify in your cofig (below).
+        first: null, // <-- Just an example. Attributes are whatever you specify in your cofig (below).
+        last: null, // <-- Just an example. Attributes are whatever you specify in your cofig (below).
+        updatedAt: null, // <-- Just an example. Attributes are whatever you specify in your cofig (below).
       },
     },
   },

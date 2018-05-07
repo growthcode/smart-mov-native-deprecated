@@ -15,9 +15,9 @@ import '~/config/LocalStorage'
 
 const appReducer = combineReducers({...reducers, reduxTokenAuth: reduxTokenAuthReducer});
 function rootReducer (state, action) {
-  if (action.type === LOGGING_OUT) {
-    state = undefined
-  }
+  // if (action.type === LOGGING_OUT) {
+  //   state = undefined
+  // }
 
   return appReducer(state, action)
 }
