@@ -2,32 +2,8 @@ import { Notifications } from 'expo'
 import React from 'react'
 import registerForPushNotificationsAsync from '~/helpers/expo/registerForPushNotificationsAsync'
 import Navigation from '~/navigation'
-
-import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
-import * as reducers from '~/redux'
-import ReduxThunk from 'redux-thunk'
 import { Provider } from 'react-redux'
-import { reduxTokenAuthReducer } from 'redux-token-auth'
-import devTools from 'remote-redux-devtools'
-import { LOGGING_OUT } from '~/redux/modules/authentication'
-
-const appReducer = combineReducers(reducers);
-function rootReducer (state, action) {
-  if (action.type === LOGGING_OUT) {
-    state = undefined
-  }
-
-  return appReducer(state, action)
-}
-
-const store = createStore(
-  rootReducer,
-  compose(
-    applyMiddleware(ReduxThunk),
-    // reduxTokenAuth: reduxTokenAuthReducer,
-    devTools()
-  )
-);
+import store from '~/Store'
 
 export default class RootNavigator extends React.Component {
   componentDidMount () {
